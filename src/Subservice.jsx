@@ -14,7 +14,7 @@ function Subservice(props) {
           <li>{itemList[4]}</li>
         </ul>
       </div>
-      <div className="main-page-services-subservice-image"></div>
+      {/* <div className="main-page-services-subservice-image"></div> */}
     </div>
   );
 }
