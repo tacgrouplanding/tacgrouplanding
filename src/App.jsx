@@ -13,6 +13,9 @@ import {
   AiFillPhone,
   AiFillMail,
 } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
+import { MdOutlineClose } from "react-icons/md";
+
 import LandingSlideImg1 from "./assets/landing-slide-img-1.jpeg";
 import LandingSlideImg2 from "./assets/landing-slide-img-2.jpeg";
 import CelikImg1 from "./assets/celik-1.jpeg";
@@ -27,7 +30,19 @@ import planningIcon from "./assets/planning.webp";
 import lightIcon from "./assets/light.webp";
 import insulatingIcon from "./assets/insulating.webp";
 
+import { useEffect, useState } from "react";
+
 function App() {
+  const [expanded, setExpanded] = useState(false);
+
+  window.addEventListener("resize", adapt);
+
+  function adapt() {
+    if (window.innerWidth >= 900) {
+      setExpanded(false);
+    }
+  }
+
   const processDescription =
     "Nulla adipisicing nostrud laborum Lorem quis proident. Eiusmod exercitation enim velit cupidatat cillum. Cillum enim deserunt labore dolor tempor.";
 
@@ -37,6 +52,7 @@ function App() {
       behavior: "smooth",
     });
   };
+
   return (
     <div className="main-page">
       <div className="main-page-header">
@@ -50,7 +66,13 @@ function App() {
               }}
             ></img>
           </div>
-          <div className="main-page-header-container-menu">
+          <div
+            className={
+              expanded
+                ? `main-page-header-container-mobile`
+                : `main-page-header-container-menu`
+            }
+          >
             <div
               className="main-page-header-container-menu-item"
               onClick={() => {
@@ -91,6 +113,14 @@ function App() {
             >
               İletişim
             </div>
+          </div>
+          <div
+            className="main-page-header-container-burger"
+            onClick={() => {
+              setExpanded((prev) => !prev);
+            }}
+          >
+            {expanded ? <MdOutlineClose /> : <AiOutlineMenu />}
           </div>
         </div>
       </div>
@@ -159,22 +189,10 @@ function App() {
       <div className="main-page-services">
         <h1>Hafif Çelik Yapılar</h1>
         <div id="hizmetlerimiz" className="main-page-services-container">
-          <Subservice
-            title="Hafif Çelik Konut"
-            itemList={["item1", "item2", "item3", "item4", "item5"]}
-          />
-          <Subservice
-            title="Hafif Çelik Villa"
-            itemList={["item1", "item2", "item3", "item4", "item5"]}
-          />
-          <Subservice
-            title="Hafif Çelik İdari Bina"
-            itemList={["item1", "item2", "item3", "item4", "item5"]}
-          />
-          <Subservice
-            title="Tiny House"
-            itemList={["item1", "item2", "item3", "item4", "item5"]}
-          />
+          <Subservice title="Hafif Çelik Konut" />
+          <Subservice title="Hafif Çelik Villa" />
+          <Subservice title="Hafif Çelik İdari Bina" />
+          <Subservice title="Tiny House" />
         </div>
       </div>
       <div className="main-page-summary">
