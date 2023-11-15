@@ -121,12 +121,16 @@
     display: flex;
     flex-direction: column;
     width: 75%;
-    padding: 32px 0;
+    padding: 32px 0 100px;
     &-subservice {
       display: flex;
       flex-direction: column;
       gap: 10px;
       height: 100%;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f2f2f2;
       > h2 {
         margin: 0;
       }
@@ -153,14 +157,12 @@
       margin: 0 auto;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: 64px;
+      gap: 48px;
       @media screen and (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
       }
       @media screen and (max-width: 600px) {
         grid-template-columns: repeat(1, 1fr);
-        gap: 24px;
       }
     }
   }
