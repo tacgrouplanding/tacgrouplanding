@@ -30,7 +30,7 @@ import planningIcon from "./assets/planning.webp";
 import lightIcon from "./assets/light.webp";
 import insulatingIcon from "./assets/insulating.webp";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -43,8 +43,12 @@ function App() {
     }
   }
 
-  const processDescription =
-    "Nulla adipisicing nostrud laborum Lorem quis proident. Eiusmod exercitation enim velit cupidatat cillum. Cillum enim deserunt labore dolor tempor.";
+  const processDescription = {
+    0: "Bu aşamada, müşterilerimizin ihtiyaçlarını anlamak için detaylı bir analiz yaparız. Müşterilerimizin beklentilerini ve taleplerini anlamak için yüz yüze görüşmeler, anketler ve site ziyaretleri gerçekleştiririz. Bu aşamada, çelik yapıların sağladığı avantajları vurgularız, örneğin dayanıklılık, hafiflik, enerji verimliliği ve çevre dostu özellikleri gibi.",
+    1: "İhtiyaç analizi sonucunda, müşterilerimize özel çelik ev tasarımları geliştiririz. Müşterilerimizin estetik tercihlerini, bütçelerini ve diğer özel gereksinimlerini dikkate alarak özelleştirilmiş projeler sunarız. Bu aşamada, çelik yapıların esnek tasarım özellikleri ve hızlı montaj avantajlarını vurgularız.",
+    2: "Tasarım onaylandıktan sonra, üretim aşamasına geçeriz. Çelik yapı malzemelerimizi yüksek kalite standartlarına göre üretiriz. Üretim sürecinde kalite kontrol süreçlerini sıkı bir şekilde uygularız ve müşterilerimize, çelik yapıların dayanıklılığı, deprem dayanıklılığı ve uzun ömürlülüğü gibi avantajlarını açıklayarak güven vermeye çalışırız.",
+    3: "Çelik evin parçalarını ürettikten sonra, hızlı bir şekilde montaj sürecine geçeriz. Çelik yapıların kolay monte edilebilir olması, müşterilerimize hızlı bir şekilde evlerine kavuşma avantajı sunar. Teslimat ve montaj sürecinde, müşterilerimize çelik yapıların enerji verimliliği ve sürdürülebilirlik konularında sağladığı avantajları vurgularız.",
+  };
 
   const scrollClick = (scrollId) => {
     window.scrollTo({
@@ -160,6 +164,38 @@ function App() {
           sağlamaktadır. Kaliteli ürün ve hizmet bütünlüğü içerisinde bulunmayı
           misyon edinmiştir.
         </p>
+        <div className="main-page-about-image-container">
+          <div className="main-page-about-image-container-image">
+            <img
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "350px",
+              }}
+              src={CelikImg1}
+            ></img>
+          </div>
+          <div className="main-page-about-image-container-image">
+            <img
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "350px",
+              }}
+              src={CelikImg2}
+            ></img>
+          </div>
+          <div className="main-page-about-image-container-image">
+            <img
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "350px",
+              }}
+              src={CelikImg3}
+            ></img>
+          </div>
+        </div>
       </div>
       <div className="main-page-vision">
         <div className="main-page-vision-container">
@@ -285,12 +321,24 @@ function App() {
         </div>
       </div>
       <div className="main-page-process" id="surecimiz">
-        <h2>Sürecimiz Nasıl İşliyor</h2>
+        <h1>Sürecimiz Nasıl İşliyor</h1>
         <div className="main-page-process-container">
-          <ProcessCard title="title" description={processDescription} />
-          <ProcessCard title="title" description={processDescription} />
-          <ProcessCard title="title" description={processDescription} />
-          <ProcessCard title="title" description={processDescription} />
+          <ProcessCard
+            title="Müşteri İhtiyaç Analizi ve Danışmanlık"
+            description={processDescription[0]}
+          />
+          <ProcessCard
+            title="Tasarım ve Proje Geliştirme"
+            description={processDescription[1]}
+          />
+          <ProcessCard
+            title="Kalite Kontrol ve Üretim"
+            description={processDescription[2]}
+          />
+          <ProcessCard
+            title="Teslimat ve Montaj"
+            description={processDescription[3]}
+          />
         </div>
       </div>
       <div className="main-page-formcontact" id="iletisim">
@@ -336,24 +384,25 @@ function App() {
           <div className="main-page-footer-socials">
             <h3>Sosyal Medyada Biz</h3>
             <div className="main-page-footer-socials-items">
-              {/* onClick=
-              {() => {
-                window.open(
-                  "https://www.facebook.com/TAC-Group-101675395417941",
-                  "_blank"
-                );
-              }} */}
               <div>
-                <AiFillFacebook />
+                <AiFillInstagram
+                  onClick={() => {
+                    window.open(
+                      "https://www.instagram.com/tacgroupcelik/",
+                      "_blank"
+                    );
+                  }}
+                />
               </div>
               <div>
-                <AiFillInstagram />
-              </div>
-              <div>
-                <AiFillLinkedin />
-              </div>
-              <div>
-                <AiFillTwitterCircle />
+                <AiFillLinkedin
+                  onClick={() => {
+                    window.open(
+                      "https://www.linkedin.com/company/serifekizikdesignstudio",
+                      "_blank"
+                    );
+                  }}
+                />
               </div>
             </div>
           </div>
