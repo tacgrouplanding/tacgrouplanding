@@ -50,6 +50,13 @@ function App() {
     3: "Çelik evin parçalarını ürettikten sonra, hızlı bir şekilde montaj sürecine geçeriz. Çelik yapıların kolay monte edilebilir olması, müşterilerimize hızlı bir şekilde evlerine kavuşma avantajı sunar. Teslimat ve montaj sürecinde, müşterilerimize çelik yapıların enerji verimliliği ve sürdürülebilirlik konularında sağladığı avantajları vurgularız.",
   };
 
+  const serviceDescription = {
+    0: "Hafif çelik konutlarımız, mükemmel dayanıklılık, hafiflik ve enerji verimliliği ile birleşerek estetik tasarımlar ve çevre dostu yaşam alanları sunar.",
+    1: "Hafif çelik villalarımız, modern tasarımları, yüksek dayanıklılıkları ve enerji verimliliği ile öne çıkarak konforlu ve lüks bir yaşam alanı sunar, müşterilerimize estetik ve fonksiyonelliği bir arada yaşama fırsatı tanır.",
+    2: "Hafif çelik kullanarak inşa ettiğimiz idari binalar, hızlı montaj avantajı ile birlikte işyerlerine uygun, modern ve işlevsel çözümler sunar. Dayanıklı yapısı, uzun ömürlülüğü ve çevre dostu özellikleri ile iş dünyasına sürdürülebilir bir iş ortamı sağlar.",
+    3: "Tiny House konseptimiz, minimalizm ve fonksiyonellik ile bir araya gelerek küçük ev hayali kuranlara şık ve sürdürülebilir bir yaşam alanı sunar. Hafif çelik kullanımı, taşınabilirlik ve enerji tasarrufu gibi avantajlarla, kullanıcılarına özgürlük ve çevre dostu bir yaşam tarzı vaat eder.",
+  };
+
   const scrollClick = (scrollId) => {
     window.scrollTo({
       top: document.getElementById(scrollId).offsetTop - 200,
@@ -225,10 +232,19 @@ function App() {
       <div className="main-page-services">
         <h1>Hafif Çelik Yapılar</h1>
         <div id="hizmetlerimiz" className="main-page-services-container">
-          <Subservice title="Hafif Çelik Konut" />
-          <Subservice title="Hafif Çelik Villa" />
-          <Subservice title="Hafif Çelik İdari Bina" />
-          <Subservice title="Tiny House" />
+          <Subservice
+            title="Hafif Çelik Konut"
+            description={serviceDescription[0]}
+          />
+          <Subservice
+            title="Hafif Çelik Villa"
+            description={serviceDescription[1]}
+          />
+          <Subservice
+            title="Hafif Çelik İdari Bina"
+            description={serviceDescription[2]}
+          />
+          <Subservice title="Tiny House" description={serviceDescription[3]} />
         </div>
       </div>
       <div className="main-page-summary">
