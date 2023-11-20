@@ -39,6 +39,7 @@ function HeaderAbout() {
           <div
             className="main-page-header-container-menu-item"
             onClick={() => {
+              window.scrollTo(0, 0);
               navigate("/");
             }}
           >
