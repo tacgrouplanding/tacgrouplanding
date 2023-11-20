@@ -8,6 +8,7 @@ import { AiFillPhone, AiFillMail } from "react-icons/ai";
 import LandingSlideImg1 from "@assets/landing-slide-img-1.jpeg";
 import LandingSlideImg2 from "@assets/landing-slide-img-2.jpeg";
 import CelikImg3 from "@assets/celik-3.jpeg";
+import contact from "@assets/contact.jpg";
 // Icons
 import isoIcon from "@assets/iso.webp";
 import steelIcon from "@assets/steel.webp";
@@ -215,7 +216,7 @@ function LandingPage() {
                 objectFit: "cover",
                 width: "100%",
               }}
-              src={LandingSlideImg1}
+              src={contact}
             ></img>
           </div>
         </div>

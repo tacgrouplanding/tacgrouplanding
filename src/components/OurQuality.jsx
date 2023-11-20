@@ -9,9 +9,9 @@ function OurQuality(props) {
         <img
           src={icon}
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
+            width: "75px",
+            height: "75px",
+            objectFit: "cover",
           }}
         ></img>
       </div>

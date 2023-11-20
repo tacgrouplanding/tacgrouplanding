@@ -248,7 +248,7 @@
       width: 75%;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 32px;
       justify-content: space-between;
       @media screen and (max-width: 900px) {
@@ -340,10 +340,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  &-icon {
-    width: 100px;
-    height: 100px;
-  }
   &-divider {
     width: 100px;
     height: 2px;
@@ -351,10 +347,11 @@
   }
   &-description {
     font-weight: 100;
+    height: 60px;
   }
   &-subdescription {
     font-weight: 300;
-    width: 75%;
+    width: 100%;
   }
 }
 
@@ -367,8 +364,8 @@
     height: 50px;
   }
   &-image {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
     object-fit: cover;
   }
 }
