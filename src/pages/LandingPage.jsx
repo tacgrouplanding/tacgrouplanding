@@ -44,7 +44,12 @@ function LandingPage() {
     <div className="main-page">
       <div className="main-page-landing">
         <div id="anasayfa" className="main-page-landing-container">
-          <Carousel showStatus={false} showThumbs={false} autoPlay={true}>
+          <Carousel
+            showStatus={false}
+            showThumbs={false}
+            autoPlay
+            infiniteLoop={true}
+          >
             <div>
               <img src={LandingSlideImg1}></img>
             </div>
