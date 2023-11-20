@@ -1,10 +1,13 @@
 import React from "react";
 
 function Subservice(props) {
-  const { title, description } = props;
+  const { subserviceImg, title, description } = props;
   return (
     <div className="main-page-services-subservice">
-      <div className="main-page-services-subservice-image"></div>
+      <img
+        className="main-page-services-subservice-image"
+        src={subserviceImg}
+      ></img>
       <h2 className="main-page-services-subservice-title">{title}</h2>
       <div className="main-page-services-subservice-description">
         {description}

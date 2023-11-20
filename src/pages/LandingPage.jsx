@@ -15,6 +15,16 @@ import planningIcon from "@assets/planning.webp";
 import lightIcon from "@assets/light.webp";
 import insulatingIcon from "@assets/insulating.webp";
 
+import teslimatmontaj from "@assets/teslimatmontaj.jpg";
+import kalitekontrol from "@assets/kalitekontrol.webp";
+import tasarimproje from "@assets/tasarimproje.jpg";
+import musteriihtiyac from "@assets/musteriihtiyac.png";
+
+import hafifcelikkonut from "@assets/hafifcelikkonut.png";
+import hafifcelikvilla from "@assets/hafifcelikvilla.png";
+import hafifcelikidaribina from "@assets/hafifcelikidaribina.png";
+import tinyhouse from "@assets/tinyhouse.jpg";
+
 function LandingPage() {
   const processDescription = {
     0: "Bu aşamada, müşterilerimizin ihtiyaçlarını anlamak için detaylı bir analiz yaparız. Müşterilerimizin beklentilerini ve taleplerini anlamak için yüz yüze görüşmeler, anketler ve site ziyaretleri gerçekleştiririz. Bu aşamada, çelik yapıların sağladığı avantajları vurgularız, örneğin dayanıklılık, hafiflik, enerji verimliliği ve çevre dostu özellikleri gibi.",
@@ -48,18 +58,65 @@ function LandingPage() {
         <h1>Hafif Çelik Yapılar</h1>
         <div id="hizmetlerimiz" className="main-page-services-container">
           <Subservice
+            subserviceImg={hafifcelikkonut}
             title="Hafif Çelik Konut"
             description={serviceDescription[0]}
           />
           <Subservice
+            subserviceImg={hafifcelikvilla}
             title="Hafif Çelik Villa"
             description={serviceDescription[1]}
           />
           <Subservice
+            subserviceImg={hafifcelikidaribina}
             title="Hafif Çelik İdari Bina"
             description={serviceDescription[2]}
           />
-          <Subservice title="Tiny House" description={serviceDescription[3]} />
+          <Subservice
+            subserviceImg={tinyhouse}
+            title="Tiny House"
+            description={serviceDescription[3]}
+          />
+        </div>
+      </div>
+      <div className="main-page-pros" id="nedenbiz">
+        <h1>Neden Bizi Seçmelisiniz?</h1>
+        <div className="main-page-pros-container">
+          <OurQuality
+            description={"Hafiflik"}
+            icon={lightIcon}
+            subdescription={
+              "Biz, yapıların taşıma ve dayanıklılık gereksinimlerini en hafif çözümlerle karşılamayı hedefliyoruz."
+            }
+          />
+          <OurQuality
+            description={"Dayanıklılık"}
+            icon={steelIcon}
+            subdescription={
+              "Yapıların uzun ömürlü olmasını sağlamak için korozyon, çürüme ve paslanma gibi sorunlardan arındırılmış yapılar sunuyoruz."
+            }
+          />
+          <OurQuality
+            description={"Hızlı ve Planlı Yapım"}
+            icon={planningIcon}
+            subdescription={
+              "Yapım sürecini hızlı ve planlı bir şekilde tamamlamayı ve detaylı çözümleri önceden düşünmeyi taahhüt ediyoruz."
+            }
+          />
+          <OurQuality
+            description={"Yangın Yalıtımı"}
+            icon={insulatingIcon}
+            subdescription={
+              "60 - 120 dakika yangın yalıtımı ile güvenli tahliyeyi mümkün kılma amacındayız."
+            }
+          />
+          <OurQuality
+            description={"Uluslararası Standartlar"}
+            icon={isoIcon}
+            subdescription={
+              "Uluslararası standartlara uygun olarak yüksek güvenlikli üretim süreçleri sunuyoruz."
+            }
+          />
         </div>
       </div>
       <div className="main-page-summary">
@@ -111,63 +168,27 @@ function LandingPage() {
           ></img>
         </div>
       </div>
-      <div className="main-page-pros" id="nedenbiz">
-        <h1>Neden Bizi Seçmelisiniz?</h1>
-        <div className="main-page-pros-container">
-          <OurQuality
-            description={"Hafiflik"}
-            icon={lightIcon}
-            subdescription={
-              "Biz, yapıların taşıma ve dayanıklılık gereksinimlerini en hafif çözümlerle karşılamayı hedefliyoruz."
-            }
-          />
-          <OurQuality
-            description={"Dayanıklılık"}
-            icon={steelIcon}
-            subdescription={
-              "Yapıların uzun ömürlü olmasını sağlamak için korozyon, çürüme ve paslanma gibi sorunlardan arındırılmış yapılar sunuyoruz."
-            }
-          />
-          <OurQuality
-            description={"Hızlı ve Planlı Yapım"}
-            icon={planningIcon}
-            subdescription={
-              "Yapım sürecini hızlı ve planlı bir şekilde tamamlamayı ve detaylı çözümleri önceden düşünmeyi taahhüt ediyoruz."
-            }
-          />
-          <OurQuality
-            description={"Yangın Yalıtımı"}
-            icon={insulatingIcon}
-            subdescription={
-              "60 - 120 dakika yangın yalıtımı ile güvenli tahliyeyi mümkün kılma amacındayız."
-            }
-          />
-          <OurQuality
-            description={"Uluslararası Standartlar"}
-            icon={isoIcon}
-            subdescription={
-              "Uluslararası standartlara uygun olarak yüksek güvenlikli üretim süreçleri sunuyoruz."
-            }
-          />
-        </div>
-      </div>
       <div className="main-page-process" id="surecimiz">
         <h1>Sürecimiz Nasıl İşliyor</h1>
         <div className="main-page-process-container">
           <ProcessCard
             title="Müşteri İhtiyaç Analizi ve Danışmanlık"
+            processImg={musteriihtiyac}
             description={processDescription[0]}
           />
           <ProcessCard
             title="Tasarım ve Proje Geliştirme"
+            processImg={tasarimproje}
             description={processDescription[1]}
           />
           <ProcessCard
             title="Kalite Kontrol ve Üretim"
+            processImg={kalitekontrol}
             description={processDescription[2]}
           />
           <ProcessCard
             title="Teslimat ve Montaj"
+            processImg={teslimatmontaj}
             description={processDescription[3]}
           />
         </div>
