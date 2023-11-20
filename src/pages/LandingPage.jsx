@@ -202,12 +202,21 @@ function LandingPage() {
       <div className="main-page-formcontact" id="iletisim">
         <div className="main-page-formcontact-container">
           <div className="main-page-formcontact-container-form">
-            <h2>Bize Ulaşın</h2>
             <div>
-              <AiFillPhone /> +90 (538) 363 69 89
+              <h1>
+                Mükemmel yaşam alanları, hafif çelikle şekilleniyor. Bizimle
+                iletişime geçin ve projelerinizde size nasıl yardımcı
+                olabileceğimizi öğrenin.
+              </h1>
             </div>
             <div>
-              <AiFillMail /> info@tacgroup.com
+              <h4>Bize Ulaşın</h4>
+              <div>
+                <AiFillPhone /> +90 (538) 363 69 89
+              </div>
+              <div>
+                <AiFillMail /> info@tacgroup.com
+              </div>
             </div>
           </div>
           <div className="main-page-formcontact-container-image">
