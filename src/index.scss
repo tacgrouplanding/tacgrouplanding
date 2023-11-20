@@ -1,4 +1,14 @@
+@font-face {
+  font-family: century-gothic-regular;
+  src: url(assets/fonts/SansSerifFLF.otf);
+}
+
+@font-face {
+  font-family: century-gothic-bold;
+  src: url(assets/fonts/SansSerifBldFLF.otf);
+}
+
 body {
   margin: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: century-gothic-regular;
 }
