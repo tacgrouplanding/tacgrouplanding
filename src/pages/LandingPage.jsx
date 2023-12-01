@@ -204,9 +204,9 @@ function LandingPage() {
           <div className="main-page-formcontact-container-form">
             <div>
               <h1>
-                Mükemmel yaşam alanları, hafif çelikle şekilleniyor. Bizimle
-                iletişime geçin ve projelerinizde size nasıl yardımcı
-                olabileceğimizi öğrenin.
+                Mükemmel yaşam alanları, hafif çelikle şekilleniyor. Size özel
+                çözümlerimizle tanışın, bize ulaşın ve inşa etmek istediğiniz
+                geleceği keşfedin...
               </h1>
             </div>
             <div>
