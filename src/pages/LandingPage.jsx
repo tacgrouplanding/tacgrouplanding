@@ -215,7 +215,7 @@ function LandingPage() {
                 <AiFillPhone /> +90 (538) 363 69 89
               </div>
               <div>
-                <AiFillMail /> info@tacgroup.com
+                <AiFillMail /> info@tacgroupcelik.com
               </div>
             </div>
           </div>

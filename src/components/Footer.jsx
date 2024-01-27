@@ -24,7 +24,7 @@ function Footer() {
             <AiFillPhone /> +90 (538) 363 69 89
           </div>
           <div>
-            <AiFillMail /> info@tacgroup.com
+            <AiFillMail /> info@tacgroupcelik.com
           </div>
         </div>
         <div className="main-page-footer-socials">
